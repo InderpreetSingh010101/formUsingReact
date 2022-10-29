@@ -8,8 +8,8 @@ let Form = (props)=>{
 
 
     return(
-        <div>
-            <button onClick={()=>{
+        <div class="form">
+            <button class="themeBtn"onClick={()=>{
                 if(props.theme === "light")
                    props.htheme("dark") ;
                 else
@@ -17,21 +17,25 @@ let Form = (props)=>{
                 
 
             }}>{props.theme}</button>
+
+      <div className="all-input">
+
             <input type="text" placeholder="Name" value={props.name}
             onChange={(e)=>{
-            props.hname(e.currentTarget.value)
+                props.hname(e.currentTarget.value)
             }
-            } ></input>
+        } ></input>
             <input type="email" placeholder="Email" value={props.email} 
              onChange={(e)=>{
-                props.hemail(e.currentTarget.value)
+                 props.hemail(e.currentTarget.value)
                 }
-                }  ></input>
-            <input type="Number" placeholder="Number" value={props.phone}  onChange={(e)=>{
-            props.hphone(e.currentTarget.value)
-            }
             }  ></input>
-            <button>Submit</button>
+            <input type="Number" placeholder="Number" value={props.phone}  onChange={(e)=>{
+                props.hphone(e.currentTarget.value)
+            }
+        }  ></input>
+            {/* <button>Submit</button> */}
+     </div>
         </div>
     )
 

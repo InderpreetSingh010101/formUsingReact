@@ -11,8 +11,9 @@ function App() {
 
 
   return (
-    <div >
-     <h1>App.JS</h1>
+    <div className="my-container" >
+     
+      <Display name={name} email={email} phone = {phone} theme={theme} />
       <Form 
       name={name} email={email} phone = {phone} theme={theme}
       hname = {setName}
@@ -20,7 +21,6 @@ function App() {
       hphone = {setPhone}
       htheme = {setTheme}
       />
-      <Display name={name} email={email} phone = {phone} theme={theme} />
 
     </div>
   );
