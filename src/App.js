@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Display from "./files/Display";
+import Form from "./files/Form";
+import { useState } from "react";
+
 
 function App() {
+  let [name , setName] = useState("Name") ;
+  let [email , setEmail] = useState("email@e.com") ;
+  let [phone , setPhone] = useState("9898989898") ;
+  let [theme , setTheme] = useState("light") ;
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+     <h1>App.JS</h1>
+      <Form 
+      name={name} email={email} phone = {phone} theme={theme}
+      hname = {setName}
+      hemail = {setEmail}
+      hphone = {setPhone}
+      htheme = {setTheme}
+      />
+      <Display name={name} email={email} phone = {phone} theme={theme} />
+
     </div>
   );
 }
